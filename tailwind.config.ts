@@ -11,11 +11,24 @@ const config: Config = {
             colors: {
                 main: "#F4F8FA",
                 "midnight-purple": "#423C66",
+                "midnight-purple-hover": "#645D93",
+                "midnight-purple-pressed": "#241E47",
+                salmon: "#FFDBCB",
+                "purple-gray":
+                    "linear-gradient(0deg, #595D7B, #595D7B), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
+                "midnight-grey": "#4D6475",
+                "inactive-border": "#E9EEF2",
+                "gray-hover": "#F3F5FE",
+                "gray-pressed": "#E8EAF2",
+                "info-box": "#F4F8FA",
+                "button-hover": "#B2A7F41A",
+                "button-pressed": "#B2A7F440",
+                "summary-color": "#1E2A32",
+                "close-active": "#F2D0C1",
             },
-        },
-        screens: {
-            mobile: "360px",
-            // => @media (min-width: 360px) { ... }
+            dropShadow: {
+                card: "0 16px 32px #1E2A3214",
+            },
         },
     },
     plugins: [],

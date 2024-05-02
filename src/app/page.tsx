@@ -1,7 +1,10 @@
 import Image from "next/image";
+import Card from "./ui/card/card";
 
 export default function Home() {
     return (
-        <main className="flex  flex-col items-center justify-between p-24 bg-c"></main>
+        <main className="flex md:items-center md:justify-center flex-1">
+            <Card />
+        </main>
     );
 }

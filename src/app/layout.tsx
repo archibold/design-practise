@@ -17,15 +17,16 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.className} bg-main min-h-screen`}>
-                <nav className="mobile:flex h-[80px] bg-white hidden">
+            <body
+                className={`${inter.className} bg-main min-h-screen flex flex-col`}
+            >
+                <nav className="hidden md:flex md:visible h-[80px] bg-white ">
                     <Image
                         className="ml-[40px]"
                         src="/logo.svg"
-                        alt="Vercel Logo"
+                        alt="Natur.ally Logo"
                         height={32}
                         width={147}
-                        priority
                     />
                 </nav>
                 {children}

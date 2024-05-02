@@ -32,7 +32,7 @@ export default function Summary({
                     className={`${inter.className} text-[12px] leading-[16.8px] font-normal text-summary-color text-center md:text-left`}
                 >
                     You will be sending <b>{cashToString}</b> every month, until{" "}
-                    <b>{formatDateToString(months)}</b> Thank you!
+                    <b>{formatDateToString(months)}.</b> Thank you!
                 </p>
             </div>
         </div>

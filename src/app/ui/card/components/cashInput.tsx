@@ -29,7 +29,7 @@ export default function CashInput({
             </p>
             <div className="relative">
                 <input
-                    className={`${rubik.className} rounded-[4px] p-[15px] pl-[40px] text-[24px] leading-[28px] font-medium focus-within:border-solid border-[1px] border-inactive-border focus-within:border-midnight-purple purple-gray-text-color outline-none w-full`}
+                    className={`${rubik.className} rounded-[4px] p-[15px] pl-[40px] text-[24px] leading-[28px] font-medium focus-within:border-solid border-[1px] border-inactive-border focus-within:border-midnight-purple text-purple-gray outline-none w-full placeholder:text-just-gray`}
                     placeholder="0.00"
                     type="text"
                     value={value}

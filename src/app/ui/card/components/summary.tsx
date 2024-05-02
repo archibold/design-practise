@@ -22,7 +22,7 @@ export default function Summary({
                     Total amount
                 </h3>
                 <h2
-                    className={`${inter.className} flex-1 text-[24px] md:text-[32px] leading-[28.8px] md:leading-[38.4px] font-bold purple-gray-text-color flex justify-end`}
+                    className={`${inter.className} flex-1 text-[24px] md:text-[32px] leading-[28.8px] md:leading-[38.4px] font-bold text-purple-gray flex justify-end`}
                 >
                     {totalCash}
                 </h2>

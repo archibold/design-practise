@@ -17,7 +17,7 @@ export default function Header() {
                     The giving block
                 </h2>
                 <h3
-                    className={`${inter.className} text-[16px] leading-[20px] font-normal purple-gray-text-color`}
+                    className={`${inter.className} text-[16px] leading-[20px] font-normal text-purple-gray`}
                 >
                     Set up your donation goal!
                 </h3>

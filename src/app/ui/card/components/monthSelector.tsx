@@ -58,12 +58,12 @@ export default function MonthSelector({
                 </button>
                 <div className="flex flex-1 flex-col justify-center items-center">
                     <h3
-                        className={`${rubik.className} purple-gray-text-color text-[16px] font-medium leading-[20px]`}
+                        className={`${rubik.className} text-purple-gray text-[16px] font-medium leading-[20px]`}
                     >
                         {Months[date.getMonth()]}
                     </h3>
                     <p
-                        className={`${work_sans.className} purple-gray-text-color text-[12px] font-normal leading-[16px]`}
+                        className={`${work_sans.className} text-purple-gray text-[12px] font-normal leading-[16px]`}
                     >
                         {date.getFullYear()}
                     </p>

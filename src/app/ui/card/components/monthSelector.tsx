@@ -21,8 +21,7 @@ export default function MonthSelector({
     function setNewDate(param: number) {
         const newDate = new Date(date);
         newDate.setMonth(date.getMonth() + param);
-
-        if (newDate.getTime() >= new Date().getTime()) {
+        if (newDate.getTime() > new Date().getTime()) {
             setDate(newDate);
 
             //count months
@@ -62,11 +61,11 @@ export default function MonthSelector({
                     >
                         {Months[date.getMonth()]}
                     </h3>
-                    <p
+                    <small
                         className={`${work_sans.className} text-purple-gray text-[12px] font-normal leading-[16px]`}
                     >
                         {date.getFullYear()}
-                    </p>
+                    </small>
                 </div>
                 <button
                     onClick={() => setNewDate(+1)}

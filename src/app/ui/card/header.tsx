@@ -3,7 +3,7 @@ import { inter, work_sans } from "../fonts";
 
 export default function Header() {
     return (
-        <div className="h-[193px] md:h-[128px] bg-salmon px-[24px] pt-[24px] md:pt-0 md:px-[40px] flex gap-[16px] md:gap-[20px] flex-col md:flex-row relative items-center md:items-start">
+        <div className="h-[193px] md:h-[128px] bg-salmon px-[24px] md:px-[40px] pt-[24px] md:pt-0 flex gap-[16px] md:gap-[20px] flex-col md:flex-row relative items-center md:items-start">
             <Image
                 className="md:mt-[32px]"
                 src="/givingBlock.svg"

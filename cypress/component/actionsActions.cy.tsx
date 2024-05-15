@@ -4,7 +4,7 @@ import "../../src/app/tailwind-generated.css";
 
 describe("<Actions />", () => {
     it("renders on 500x500", () => {
-        cy.mount(<Actions />);
+        cy.mount(<Actions canContinue />);
         cy.get("button").eq(0).should("be.hidden");
         cy.get("button")
             .eq(1)
@@ -14,7 +14,7 @@ describe("<Actions />", () => {
 
     it("renders on 1600x1600", () => {
         cy.viewport(1600, 1600);
-        cy.mount(<Actions />);
+        cy.mount(<Actions canContinue />);
         cy.get("button")
             .eq(0)
             .should("not.be.hidden")

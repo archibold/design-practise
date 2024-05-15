@@ -5,8 +5,15 @@ import "../../src/app/tailwind-generated.css";
 describe("<CashInput />", () => {
     it("renders", () => {
         const onChangeSpy = cy.spy().as("onChangeSpy");
+        const onChangeCurrency = cy.spy().as("onChangeCurrency");
 
-        cy.mount(<CashInput onChangeCash={onChangeSpy} />);
+        cy.mount(
+            <CashInput
+                defaultCurrency="PLN"
+                onChangeCash={onChangeSpy}
+                onChangeCurrency={onChangeCurrency}
+            />
+        );
         cy.get("input").type("2343");
         cy.get("input").should("have.value", "2,343");
 

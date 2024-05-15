@@ -9,7 +9,9 @@ import Summary from "./components/summary";
 export default function Content() {
     const [cash, setCash] = useState(0);
     const [months, setMonths] = useState(1);
+    const [currency, setCurrency] = useState("USD");
 
+    console.log(cash);
     const onChangeCash = (cash: number) => {
         setCash(cash);
     };
@@ -18,14 +20,23 @@ export default function Content() {
         setMonths(months);
     };
 
+    const onChangeCurrency = (value: string) => {
+        // console.log(value);
+        setCurrency(currency);
+    };
+
     return (
         <div className="mx-[24px] md:mx-[40px] my-[32px] flex flex-col gap-[40px] md:gap-[32px]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
-                <CashInput onChangeCash={onChangeCash} />
+                <CashInput
+                    defaultCurrency={currency}
+                    onChangeCash={onChangeCash}
+                    onChangeCurrency={onChangeCurrency}
+                />
                 <MonthSelector onChangeMonth={onChangeMonth} />
             </div>
             <Summary cash={cash} months={months} />
-            <Actions />
+            <Actions canContinue={cash !== 0 && !isNaN(cash)} />
         </div>
     );
 }

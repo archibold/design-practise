@@ -24,7 +24,8 @@ const config: Config = {
                 "button-pressed": "#B2A7F440",
                 "summary-color": "#1E2A32",
                 "close-active": "#F2D0C1",
-                "just-gray": "##BEBEBE",
+                "just-gray": "#BEBEBE",
+                "button-disabled": "#AAAAAA",
             },
             dropShadow: {
                 card: "0 16px 32px #1E2A3214",

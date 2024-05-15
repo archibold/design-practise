@@ -7,8 +7,12 @@ import { formatCurrency, currencyToString } from "../../../lib/utils";
 
 export default function CashInput({
     onChangeCash,
+    onChangeCurrency,
+    defaultCurrency,
 }: {
     onChangeCash: (arg0: number) => void;
+    onChangeCurrency: (arg0: string) => void;
+    defaultCurrency: string;
 }) {
     const [value, setValue] = useState("");
 
@@ -20,6 +24,11 @@ export default function CashInput({
         setValue(newValue);
     };
 
+    const onChangeCurrencyElement = (e: ChangeEvent<HTMLSelectElement>) => {
+        const { value } = e.target;
+        onChangeCurrency(value);
+    };
+
     return (
         <div className="flex flex-col gap-[6px]">
             <p
@@ -29,7 +38,7 @@ export default function CashInput({
             </p>
             <div className="relative">
                 <input
-                    className={`${rubik.className} rounded-[4px] p-[15px] pl-[40px] text-[24px] leading-[28px] font-medium focus-within:border-solid border-[1px] border-inactive-border focus-within:border-midnight-purple text-purple-gray outline-none w-full placeholder:text-just-gray`}
+                    className={`${rubik.className} rounded-[4px] p-[15px] pl-[40px] pr-[110px] text-[24px] leading-[28px] font-medium focus-within:border-solid border-[1px] border-inactive-border focus-within:border-midnight-purple text-purple-gray outline-none w-full placeholder:text-just-gray`}
                     placeholder="0.00"
                     type="text"
                     value={value}
@@ -45,6 +54,15 @@ export default function CashInput({
                         width={9.35}
                     />
                 </div>
+
+                <select
+                    className={`${rubik.className} font-medium absolute text-purple-gray right-[16px] top-[18px] text-[16px] leading-[28px] border-l-[1px] px-[16px] outline-none`}
+                    defaultValue={defaultCurrency}
+                    onChange={onChangeCurrencyElement}
+                >
+                    <option>USD</option>
+                    <option>PLN</option>
+                </select>
             </div>
         </div>
     );

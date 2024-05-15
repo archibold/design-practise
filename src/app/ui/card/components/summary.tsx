@@ -15,7 +15,7 @@ export default function Summary({
     const cashToString = cash ? `$${formatCurrency(cash.toString())}` : "$0";
     return (
         <div className="flex gap-[24px] flex-col border-inactive-border border-[1px] border-solid md:border-0">
-            <div className="flex gap-[8px] items-center pt-[24px] px-[16px] ">
+            <div className="flex gap-[8px] items-center pt-[24px] md:pt-0 px-[16px] ">
                 <h3
                     className={`${work_sans.className} flex-1 text-[16px] md:text-[20px] leading-[19.2px] md:leading-[24px] font-medium text-summary-color`}
                 >

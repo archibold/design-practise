@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Card from "./ui/card/card";
 
 export default function Home() {

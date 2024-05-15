@@ -21,8 +21,7 @@ export default function MonthSelector({
     function setNewDate(param: number) {
         const newDate = new Date(date);
         newDate.setMonth(date.getMonth() + param);
-
-        if (newDate.getTime() >= new Date().getTime()) {
+        if (newDate.getTime() > new Date().getTime()) {
             setDate(newDate);
 
             //count months
@@ -43,7 +42,7 @@ export default function MonthSelector({
             >
                 Every month until
             </p>
-            <div className="flex gap-[6px] justify-center items-center p-[6px] h-[60px] rounded-[4px] border-[1px] border-inactive-border w-full">
+            <div className="flex gap-[6px] justify-center items-center px-[10px] p-[6px] h-[60px] rounded-[4px] border-[1px] border-inactive-border w-full">
                 <button
                     onClick={() => setNewDate(-1)}
                     className="w-[24px] h-[24px] rounded-[5px] hover:bg-gray-hover active:bg-gray-pressed"
@@ -62,11 +61,11 @@ export default function MonthSelector({
                     >
                         {Months[date.getMonth()]}
                     </h3>
-                    <p
+                    <small
                         className={`${work_sans.className} text-purple-gray text-[12px] font-normal leading-[16px]`}
                     >
                         {date.getFullYear()}
-                    </p>
+                    </small>
                 </div>
                 <button
                     onClick={() => setNewDate(+1)}

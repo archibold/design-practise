@@ -36,7 +36,6 @@ export function formatCurrency(value: string): string {
 }
 
 export function currencyToString(currency: string): number {
-    console.log(currency.replaceAll(",", ""));
     return parseFloat(currency.replaceAll(",", ""));
 }
 

@@ -3,14 +3,15 @@ import { inter, work_sans } from "../fonts";
 
 export default function Header() {
     return (
-        <div className="h-[193px] md:h-[128px] bg-salmon px-[24px] pt-[24px] md:pt-0 md:px-[40px] flex items-center gap-[16px] md:gap-[20px] flex-col md:flex-row relative">
+        <div className="h-[193px] md:h-[128px] bg-salmon px-[24px] md:px-[40px] pt-[24px] md:pt-0 flex gap-[16px] md:gap-[20px] flex-col md:flex-row relative items-center md:items-start">
             <Image
+                className="md:mt-[32px]"
                 src="/givingBlock.svg"
                 alt="Giving block"
                 height={72}
                 width={72}
             />
-            <div className="text-midnight-purple flex flex-col gap-[4px] flex-1 md:items-start items-center">
+            <div className="text-midnight-purple md:mt-[36px] flex flex-col gap-[4px] flex-1 md:items-start items-center">
                 <h2
                     className={`${work_sans.className} text-[24px] leading-[28.8px] md:text-[32px] font-semibold md:leading-[38.4px]`}
                 >
